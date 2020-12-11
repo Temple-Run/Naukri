@@ -16,6 +16,7 @@ WebDriver driver;
 		
 	}
 	public void iniatingloginpage() {
+		System.out.println("***************************Started***************************************");
 		System.setProperty("webdriver.chrome.driver","C:\\Users\\divya.a.murugesan\\Documents\\Drivers\\chromedriver.exe");
 		driver= new ChromeDriver();
 		driver.get("https://www.naukri.com/nlogin/login");
@@ -38,6 +39,9 @@ WebDriver driver;
 		driver.findElement(By.xpath("//a[text()='Logout']")).click();
 		
 		System.out.println("logout");
+		driver.close();
+		System.out.println("*****************************Completed***************************");
+		
 	}
 	
 }
