@@ -27,7 +27,9 @@ WebDriver driver;
 	public void enteringcredentials() throws InterruptedException {
 		
 		driver.findElement(By.id("usernameField")).sendKeys("mdivya290997@gmail.com");
+		System.out.println("username entered");
 		driver.findElement(By.id("passwordField")).sendKeys("#Diya2909#");
+		System.out.println("password entered");
 		driver.findElement(By.xpath("//button[text()='Login']")).click();
 		Thread.sleep(10000);
 		System.out.println("enteringcredentials");
@@ -37,8 +39,10 @@ WebDriver driver;
 		actions.moveToElement(driver.findElement(By.xpath("//div[text()='My Naukri']/parent::a"))).perform();;
 		Thread.sleep(5000);
 		driver.findElement(By.xpath("//a[text()='Logout']")).click();
-		
-		System.out.println("logout");
+		Thread.sleep(5000);
+		System.out.println("log out in progress");
+		Thread.sleep(5000);
+		System.out.println("log out completed");
 		driver.close();
 		System.out.println("*****************************Completed***************************");
 		
